@@ -1,17 +1,19 @@
-# ApplyTrack – Smart Job Application Tracker
+# JobFlow – Smart Job Application Tracker
 
-ApplyTrack is a web application that helps job seekers organize and manage their job applications in one place. Users can record company details, track application statuses, add notes, and manage follow-up dates through a simple dashboard.
+**JobFlow** is a web application that helps job seekers manage their job applications, track application statuses, and organize follow-up dates in one place.
+
+
+📂 **Source Code:** [GitHub Repository](https://github.com/Swapnila13/JobFlow)
 
 ## Features
 
-- **Application Management:** Add, view, edit, and delete job applications.
-- **Status Tracking:** Track applications through Applied, Online Assessment, Interview, Selected, and Rejected statuses.
-- **Follow-up Reminders:** Identify follow-ups that are overdue, due today, or upcoming.
-- **Input Validation:** Validate required fields, dates, and application statuses.
-- **REST API:** Manage job application records through HTTP requests.
-- **Data Storage:** Store application records using SQLite.
-- **Automated Testing:** Test application functionality and input validation using Python's `unittest` framework.
-- **User-Friendly Dashboard:** Manage applications through a web interface built with HTML, CSS, and JavaScript.
+- Add, view, edit, and delete job applications.
+- Track statuses: Applied, Online Assessment, Interview, Selected, and Rejected.
+- Identify overdue, due-today, and upcoming follow-ups.
+- Validate application details and dates.
+- Manage applications through REST API endpoints.
+- Store records using SQLite.
+- Run automated tests using Python's `unittest` framework.
 
 ## Tech Stack
 
@@ -20,117 +22,59 @@ ApplyTrack is a web application that helps job seekers organize and manage their
 - **Frontend:** HTML, CSS, JavaScript
 - **API:** REST API
 - **Testing:** Python `unittest`
-- **Deployment:** Planned
+- **Deployment:** Render
+- **Version Control:** Git and GitHub
 
-## Project Structure
+## Run Locally
 
-```text
-ApplyTrack/
-├── app.py
-├── database.py
-├── requirements.txt
-├── README.md
-├── .gitignore
-├── static/
-│   ├── css/
-│   │   └── style.css
-│   └── js/
-│       └── script.js
-├── templates/
-│   ├── base.html
-│   ├── dashboard.html
-│   ├── add_application.html
-│   ├── edit_application.html
-│   ├── 404.html
-│   └── 500.html
-└── tests/
-    └── test_app.py
-```
+1. Clone the repository:
 
-## Getting Started
+   ```bash
+   git clone https://github.com/Swapnila13/ApplyTrack.git
+   cd ApplyTrack
+   ```
 
-### Prerequisites
+2. Create and activate a virtual environment:
 
-- Python 3.10 or a compatible newer version
-- Git
+   ```powershell
+   python -m venv .venv
+   .venv\Scripts\activate
+   ```
 
-### 1. Clone the repository
+3. Install dependencies:
 
-```bash
-git clone https://github.com/Swapnila13/ApplyTrack.git
-cd ApplyTrack
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### 2. Create a virtual environment
+4. Start the application:
 
-**Windows:**
+   ```bash
+   python app.py
+   ```
 
-```powershell
-python -m venv .venv
-.venv\Scripts\activate
-```
+5. Open `http://127.0.0.1:5000` in your browser.
 
-### 3. Install dependencies
+## Automated Tests
 
-```bash
-python -m pip install -r requirements.txt
-```
-
-### 4. Run the application
-
-```bash
-python app.py
-```
-
-Open the local address displayed in your terminal, typically:
-
-http://127.0.0.1:5000
-
-## REST API
-
-ApplyTrack provides API endpoints for managing job applications.
-
-| Method | Endpoint | Purpose |
-|---|---|---|
-| GET | `/api/applications` | Retrieve applications |
-| POST | `/api/applications` | Create an application |
-| PATCH | `/api/applications/<id>` | Update an application |
-| DELETE | `/api/applications/<id>` | Delete an application |
-
-The API supports input validation and appropriate error responses for invalid data and nonexistent application records.
-
-## Running Automated Tests
-
-Run the test suite from the project root:
+Run the tests with:
 
 ```bash
 python -m unittest discover -s tests -v
 ```
 
-The project currently has **10 automated tests passing** in the local development environment.
-
-## Learning Outcomes
-
-Through this project, I practised:
-
-- Building a web application using Flask.
-- Performing CRUD operations with SQLite.
-- Designing and testing REST API endpoints.
-- Validating user input and handling errors.
-- Writing automated tests.
-- Using Git and GitHub for version control.
+The project currently has 10 automated tests passing in the local development environment.
 
 ## Future Improvements
 
-- Deploy the application online.
-- Add secure user authentication and individual user accounts.
-- Configure persistent cloud database storage.
-- Add job search analytics and application statistics.
-- Improve follow-up notifications.
+- User authentication and individual accounts.
+- Application statistics and job-search analytics.
+- Enhanced follow-up notifications.
 
 ## Author
 
 **Swapnila**
 
-GitHub: [Swapnila13](https://github.com/Swapnila13)
+[GitHub Profile](https://github.com/Swapnila13)
+
 
